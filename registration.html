@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="This is a website for a magazine that gathering study from divise subjects, this page is for sign up a new account.">
+        <meta name="author" content="Magazine Designer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Magazine">
+        <link rel="stylesheet" type="text/css" href="StyleSheet/styles.css">
+        <link rel="stylesheet" type="text/css" href="StyleSheet/signUpPageStyles.css">
+        <link rel="icon" href="Assets/homePageIcon.png">
+
+        <title>Magazine - New User</title>
+    </head>
+    <body>
+        <!-- below are the design of sign up form when 'Sign Up' button is pressed -->
+        <div id="signup-form-container">
+            <form id="reg-form">
+                <!-- Username -->
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Enter your username..">
+
+                <!-- here provides a selection menu -->
+                <!-- Gender selection -->
+                <label for="gender">Gender</label>
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+             
+                <!-- E-mail address -->
+                <label for="e-mail">E-Mail Address</label>
+                <input type="email" name="emailaddress" placeholder="Enter your e-mail address..">
+
+                <!-- Phone number -->
+                <label for="phone-number">Phone Number</label>
+                <input type="number" name="phonenumber" placeholder="Enter your phone number..">
+
+                <!-- Password -->
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Enter your password..">
+
+                <!-- Double check of password -->
+                <label for="password">Confirm Your Password</label>
+                <input type="password" name="password" placeholder="Enter your password..">
+
+                <!-- Registration button on sign up form page -->
+                <input type="submit" id="sign-up-submit" value="Sign Up">
+          
+            </form>
+        </div>
+
+        <!-- The scripts mainly put inside the footer tag below -->
+        <footer>
+            <script src="Scripts/signUpNotice.js"></script>
+            <script src="Scripts/changeColorBlank.js"></script>
+        </footer>
+
+    </body>
+</html>

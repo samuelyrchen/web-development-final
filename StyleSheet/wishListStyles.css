@@ -1,0 +1,121 @@
+/* Below is the styling for wish list page */
+
+/* Size for Mobile */
+@media only screen and (max-width: 570px){
+    /* Below styles the looping codes */
+    /* Styles the sample magazine section, which includes 
+    sample magazine image and its description, display flex that 
+    display these two elements horizontally on screen */
+    /* Notice: On mobile screen the descritive paragraph of sample 
+    magazine is hidden */
+    .sample-magazine {
+        display: inline;
+    }
+    /* Styles of the sample magazine image */
+    .sampleMagazineImage {
+        width: 50%;
+        padding: 20px;
+        position: relative;
+        left: 20%;
+    }
+    /* Styles of the descriptive paragraph of sample magazine */
+    /* Notice: this would not display on mobile screen */
+    .sample-magazine-description {
+        position: relative;
+        top: 70px;
+        padding: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: none;
+    }
+    /* Styles of the 'Subscribe' button */
+    .subscribe-button {
+        position: relative;
+        right: 15%;
+        cursor: pointer;
+        background: rgb(154, 154, 215);
+        color: antiquewhite;
+    }
+    /* Change the styling when hover on 'Subscribe' button */
+    .subscribe-button:hover {
+        background: gold;
+        color: blueviolet;
+    }
+}
+
+/* Size for Tablet */
+@media only screen and (min-width: 571px) and (max-width: 1010px){
+    /* Below styles the looping codes */
+    /* Styles the sample magazine section, which includes 
+    sample magazine image and its description, display flex that 
+    display these two elements horizontally on screen */
+    .sample-magazine {
+        display: flex;
+        background-color: aquamarine;
+        border-radius: 30px;
+        border: 1px solid darkblue;
+    }
+    /* Styles of the sample magazine image */
+    .sampleMagazineImage {
+        width: 300px;
+        padding: 20px;
+    }
+    /* Styles of the descriptive paragraph of sample magazine */
+    .sample-magazine-description {
+        position: relative;
+        top: 70px;
+        padding: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    /* Styles of the 'Subscribe' button */
+    .subscribe-button {
+        cursor: pointer;
+        background: rgb(154, 154, 215);
+        color: antiquewhite;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    /* Change the styling when hover on 'Subscribe' button */
+    .subscribe-button:hover {
+        background: gold;
+        color: blueviolet;
+    }
+}
+
+/* Size for Desktop */
+@media only screen and (min-width: 1011px){
+    /* Below styles the looping codes */
+    /* Styles the sample magazine section, which includes 
+    sample magazine image and its description, display flex that 
+    display these two elements horizontally on screen */
+    .sample-magazine {
+        display: flex;
+        background-color: aquamarine;
+        border-radius: 30px;
+        border: 1px solid darkblue;
+    }
+    /* Styles of the sample magazine image */
+    .sampleMagazineImage {
+        width: 300px;
+        padding: 20px;
+    }
+    /* Styles of the descriptive paragraph of sample magazine */
+    .sample-magazine-description {
+        position: relative;
+        top: 70px;
+        padding: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    /* Styles of the 'Subscribe' button */
+    .subscribe-button {
+        cursor: pointer;
+        background: rgb(154, 154, 215);
+        color: antiquewhite;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    /* Change the styling when hover on 'Subscribe' button */
+    .subscribe-button:hover {
+        background: gold;
+        color: blueviolet;
+    }
+}

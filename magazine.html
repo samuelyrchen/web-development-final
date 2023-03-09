@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- This is the Home page for the magazine website -->
+        <title>New Times - Home</title>
+        <meta charset="utf-8">
+        <meta name="description" content="This is a website for a magazine that gathering study from divise subjects.">
+        <meta name="author" content="Magazine Designer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="refresh" content="600">
+        <meta name="keywords" content="Magazine">
+        <link rel="stylesheet" type="text/css" href="StyleSheet/styles.css">
+        <link rel="icon" href="Assets/homePageIcon.png">
+        <!-- The follow code with script tag import the javascript library 
+        called handlebars.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    </head>
+
+    <body>
+
+        <header class="header-container">
+            <!-- here generate a size changing proerty to elements in body -->
+            <p id="sizeChanging">
+                <!-- Three sizes are available for change -->
+                <span class="smallSize" id="changeToSmall">Small</span>
+                <span class="mediumSize" id="changeToMedium">Medium</span>
+                <span class="largeSize" id="changeToLarge">Large</span>
+            </p>
+            <img id="logo-image1" src="Assets/magazineLogo1.png">
+            <img id="logo-image2" src="Assets/magazineLogo2.png">
+            
+            <!-- The following codes use handlebars.js to refer the username -->
+            <script id="user-name" type="template/handlebars">
+                <h1 id="logo-text">Hello, {{username}}! Welcome to New Times</h1>
+            </script>
+            <span id="target"></span>
+
+            <!-- Codes below create a login button, a popup form is generated when login buttonm is clicked -->
+            <div id="login-button-box">
+                <!-- Here is the 'Log in' button at the homepage -->
+                <a href="#login-button" id="home-page-login-button">Log In</a>
+            </div>
+            <!-- Codes below is the popup form overlay -->
+            <div class="overlay-form" id="login-button">
+                <div id="login-button-form">
+                    <h2>Sign In</h2>
+                    <!-- here is the close icon on popup form -->
+                    <a href="#" id="close-icon">&times;</a>
+                    <div id="form-content">
+                        <div id="form-container">
+                            <!-- Below is the form generated label 'Username' and 'Password', a 'Sign In' button comes after them -->
+                            <form id="popup-form">
+                                <label>Username</label>
+                                <input type="text" placeholder="Enter your username...">
+                                <label>Password</label>
+                                <input type="password" placeholder="Enter your password...">
+                                <!-- Here is the 'Sign In' button in hidden form -->
+                                <input type="submit" value="Sign In">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="nav-container">
+            <!-- Below is the design of navigation menu -->
+            <nav id="nav-bars-container">
+                <!-- here is the toggle menu, triggered depends on screen size -->
+                <label for="toggle" id="toggle-menu">&#9776;</label>
+                <input type="checkbox" id= "toggle"/>
+                <div id="menu">
+                    <ol>
+                        <li><a href="magazine.html">Home</a></li>
+                        <li><a href="subscription.html">Subscription</a></li>
+                        <li><a href="wishList.html">Wish List</a></li>
+                        <li><a href="academy.html">Academy</a></li>
+                        <li id="signup-button-mobile"><a href="registration.html">Sign Up</a></li>
+                    </ol>
+                </div>
+            </nav>
+            <!-- here is the 'Sign Up' button at homepage -->
+            <a href="registration.html" id="registration-button">Sign Up</a>
+        </div>
+
+        <!-- Here is the module that describe 'Today's Story -->
+        <div id="today-story-container">
+            <h2 id="todays-story">Today's Story</h3>
+            <!-- Notice: the content in 'todays-story-content' is just 
+            a science story copied from 'https://www.science.org/doi/10.1126/science.adh3526', 
+            and this is just an example place here. -->
+            <p id="todays-story-content">Declaring oneself—or aspiring to become—a global superpower sits uneasily with a British tendency towards self-deprecation. Rather, in this post-Elizabethan, post-Brexit chapter of the United Kingdom’s story, public debate is undercut by fear of decline. References to Britain’s imperial past are often sidestepped or accompanied by apologies. The exception is in political discussions of science, where assertions of national supremacy and manifest global destiny are now commonplace. Ministers and prime ministers past and present insist that the UK is already—or is well on the way to becoming—a “science superpower.” Whether this goal is sensible or even feasible is barely discussed.</p>
+            <!-- A video here -->
+            <video id="todays-story-video" width="260" height="150" controls>
+                <source src="Assets/shortVideo.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- here is the module for introduction for new magazine -->
+        <div id="new-book-container">
+            <h2 id="new-for-client">What is New for You</h2>
+            <img id="magazine-image-homepage" src="Assets/magazineImage1.jpg">
+            <!-- Notice: the content in 'new-book-description is just 
+            a sample description of magazine copied from 
+            'https://en.wikipedia.org/wiki/New!', 
+            this is just an example place here. -->
+            <p id="new-book-description">New! is a British weekly magazine, specialising in celebrity news and is published by Reach plc, which also oversees OK! magazine, the Daily Mirror, Daily Express and Daily Star.</p>
+        </div>
+
+        
+            
+
+        <!-- Below are the contents of the last two part of the 
+        page that mainly focus on target some irrelevent information 
+        like authurization, copyright etc. -->
+        <div id="end-partA-container">
+            <div id="final-list-object1">
+                <ul>
+                    <li class="complement-info lasting">News</li>
+                    <li class="complement-info lasting">Sports</li>
+                    <li class="complement-info lasting">Taste</li>
+                    <li class="complement-info lasting">Science</li>
+                    <li class="complement-info lasting">Travel</li>
+                </ul>
+            </div>
+            <div id="final-list-object2">
+                <ul>
+                    <li class="complement-info lasting">Subscription</li>
+                    <li class="complement-info lasting">Profile</li>
+                    <li class="complement-info lasting">Wish List</li>
+                    <li class="complement-info lasting">Newsletter</li>
+                </ul>
+            </div>
+            <div id="final-list-object3">
+                <ul>
+                    <li class="complement-info lasting">About Us</li>
+                    <li class="complement-info lasting">Internships</li>
+                    <li class="complement-info lasting">Advertise</li>
+                </ul>
+            </div>
+
+            <img id="image-end" src="Assets/magazineLogoEnd.png">
+        </div>
+        <div id="end-partB-container">
+            <div id="final-list-object4">
+                <ul>
+                    <li class="complement-info">
+                        <b>Contact Us</b>
+                    </li>
+                    <li class="complement-info">
+                        <p>Phone Number: (012)345-6789</p>
+                    </li>
+                    <li class="complement-info">
+                        <address>1<sup>st</sup> Avenue, London, A0A B0B</address>
+                    </li>
+                    <li class="complement-info">
+                        <p>Email Address: abcdefg@expamle.com</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="final-list-object5">
+                <ul>
+                    <li class="complement-info">
+                        <b>© Magazine Designer, All Rights Reserved</b>
+                    </li>
+                    <li class="complement-info lasting">Legal</li>
+                    <li class="complement-info lasting">Privacy</li>
+                    <li class="complement-info lasting">Help</li>
+                    <li class="complement-info lasting">Regulations</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- The scripts mainly put inside the footer tag below -->
+        <footer>
+            <script src="Scripts/changeFontSize.js"></script>
+            <script src="Scripts/userName.js"></script>
+        </footer>
+    </body>
+</html>

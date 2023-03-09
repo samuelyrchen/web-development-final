@@ -1,0 +1,1013 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Here refers tp the 'Log In' button at homepage, a hidden form 
+will pop up when the button is clicked */
+#home-page-login-button {
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid rosybrown;
+    padding: 10px 10px;
+    background-color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 3px;
+    border-radius: 50px;
+    color: darkblue;
+    cursor: pointer;
+}
+/* Add effects when hover on 'Log In' button */
+#home-page-login-button:hover {
+    background-color:hsl(62, 90%, 65%);
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* #logo-image1 {
+    width: 6%;
+    grid-area: logo-image1;
+    flex: 1;
+    position: absolute;
+    left: 3%;
+    top: 16px;
+    opacity: 0.8;
+}
+#logo-image2 {
+    width: 8%;
+    grid-area: logo-image2;
+    flex: 1;
+    position: absolute;
+    left: 9%;
+    top: 16px;
+    opacity: 0.8;
+} */
+/* #logo-text {
+    font-family: serif;
+    color: yellowgreen;
+    grid-area: logo-text;
+    flex: 1;
+    position: absolute;
+    left: 30%;
+    top: 16px;
+} */
+/* #login-button-box {
+    grid-area: login-btn;
+    flex: 1;
+    position: absolute;
+    right: 70px;
+    top: 50px;
+} */
+
+/* Codes below style the pop up form when the logon button 
+in homepage is clocked */
+#login-button {
+    font-size: 1em;
+    padding: 10px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: blueviolet;
+    background: hsl(167, 75%, 90%);
+    border-radius: 30px;
+}
+/* Style the popup form and set it invisible before 
+click the login button */
+/* Notice: the class '.overlay-form' fixed the posithion 
+on screen when the form pop ups */
+.overlay-form {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    /* background: rgb(250, 250, 250); */
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+/* Let the popup form visible after click the button */
+.overlay-form:target {
+    visibility: visible;
+    opacity: 1;
+}
+/* Position each element in #login-button-form relative to 
+the form size as client resizes the screen */
+#login-button-form {
+    position: relative;
+    margin: 70px auto;
+    padding: 20px;
+    background: #aaa;
+    border-radius: 15px;
+    width: 80%;
+    transition: all 0.5s ease-in-out;
+}
+
+#login-button-form h2 {
+    margin-top: 100px;
+    color: rgba(10, 70, 130, 0.7);
+}
+
+/* Here is the control of the close icon on hidden form, 
+when client clicks it, quit back to the homepage from the form */
+#login-button-form #close-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #020;
+}
+#login-button-form #form-content {
+    max-height: 45%;
+}
+#login-button-form #form-container {
+    border-radius: 7%;
+    background-color: lightgrey;
+    padding: 20px 0;
+    text-align: center;
+}
+#login-button-form form label {
+    font-weight: 400;
+    /* letter-spacing: 2px; */
+}
+/*Set the property of the elements in hidden form */
+#popup-form input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 3px solid slategray;
+    box-sizing: border-box;
+    border-radius: 10%;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+/*Set the property of the elements in hidden form */
+#popup-form input[type=password] {
+    width: 100%;
+    padding: 12px;
+    border: 3px solid slategray;
+    box-sizing: border-box;
+    border-radius: 10%;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+/*Set the property of 'Sign In' button in hidden form */
+#popup-form input[type=submit] {
+    background-color: #9a9;
+    padding: 20px 55px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30%;
+    color: lightgoldenrodyellow;
+}
+/* Change the background color and text color when 
+hover on 'Sign In' button */
+#popup-form input[type=submit]:hover {
+    background-color: lightyellow;
+    color: rgb(0, 200, 100);
+}
+
+
+/* Size for Mobile */
+@media only screen and (max-width: 570px){
+
+    body {
+        background-color: azure;
+    }
+    /* logo-image1 and logo-image2 would not display */
+    #logo-image1 {
+        display: none;
+    }
+    #logo-image2 {
+        display: none;
+    }
+    /* Set the property of the logo text for mobile screen size */
+    #logo-text {
+        font-family: serif;
+        color: yellowgreen;
+        grid-area: logo-text;
+        flex: 1;
+        font-size: 1em;
+        text-align: center;
+        position: relative;
+        top: 10px;
+        left: 20px;
+    }
+    /* Here is where to place the 'Log In' button */
+    #login-button-box {
+        grid-area: login-btn;
+        flex: 1;
+        position: absolute;
+        top: 30px;
+        right: 15px;
+    }
+
+    /* Here is the reposition part to place each element in 
+    header section in desire order for mobile */
+    .header-container {
+        background-color: rgba(10, 70, 130, 0.7);
+        border-radius: 10px;
+        padding: 10px;
+        display: grid;
+        flex: 1;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas:
+        'logo-text logo-text logo-text logo-text logo-text logo-btn'
+    }
+    /* here is the toggle menu icon */
+    #toggle-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        float: right;
+        margin-right: 10px;
+        position: relative;
+        color: gray;
+    }
+    /* the toggle menu icon would not trigger without any actions */
+    #toggle{
+        display: none;
+    }
+    #toggle:checked + #menu{
+        display: block;
+    }
+
+    /* when the toggle menu icon is triggered, the navigation menu 
+    will be shown */
+    #nav-bars-container {
+        flex: 1;
+        border-radius: 11px;
+        text-align: center;
+        border: 1px solid darkgray;
+        background-color: hsl(196, 57%, 54%)
+    }
+
+    /* below are the properties of the elements in toggle menu */
+    #menu {
+        display: none;
+        border-radius: 20px;
+        width:100%;
+        clear: right;
+    }
+    #menu ol {
+        border:1px solid white;
+        border-width:1px 0;
+        list-style:none;
+        margin:0;
+        padding:0;
+        text-align:center;
+    }
+    /* Styling of the list of navigation bars */
+    #menu ol li {
+        list-style-type: none;
+        display: block;
+        padding: 3px;
+        border-radius: 3px;
+        background-color:aquamarine;
+        border:1px solid darkorange;
+    }
+    #menu ol li a {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        color: violet;
+        padding: 5px;
+        /* border-radius: 10px; */
+        display: inline-block;
+        font-variant: normal;
+    }
+    /* 'Sign Up' button would not display on mobile */
+    #registration-button {
+        display: none;
+    }
+    /* below are the contents for the todays-story including a video */
+    /*'Today's Story' title */
+    #todays-story {
+        flex: 1;
+        grid-area: todays-story;
+        text-align: center;
+        font-family: monospace;
+        font-size: 2em;
+        color: darkgray;
+    }
+    /*'Today's Story' content */
+    #todays-story-content {
+        flex: 1;
+        grid-area: todays-story-content;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1em;
+        position: relative;
+        text-align: justify;
+        padding-left: 30px;
+    }
+    /* 'Today's Story' video */
+    /* Notice: the video would not show on mobile device */
+    #todays-story-video {
+        flex: 1;
+        grid-area: todays-story-video;
+        border-radius: 30px;
+        width: 95%;
+        position: relative;
+        left: 7px;
+        bottom: 10px;
+        visibility: hidden;
+    }
+    /* The arrangement of each element in 'Today's Story' section 
+    for mobile screen size */
+    #today-story-container {
+        width: 100%;
+        position: relative;
+        background-color: aquamarine;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'todays-story todays-story todays-story todays-story todays-story todays-story'
+        'todays-story-content todays-story-content todays-story-content todays-story-content todays-story-content todays-story-content'
+    }
+
+    /* here is the styling module for new magazine introduction */
+    #new-book-container {
+        background-color: hsl(62, 90%, 65%);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'new-for-c new-for-c new-for-c new-for-c new-for-c new-for-c'
+        'home-image1 home-image1 home-image1 home-image1 home-image1 home-image1'
+        'book-des book-des book-des book-des book-des book-des'
+    }
+    /* title for introduce new magazine */
+    #new-for-client {
+        flex: 1;
+        grid-area: new-for-c;
+        text-align: center;
+        font-family: monospace;
+        color: rgb(30, 60, 30);
+        font-size: 2em;
+    }
+    /* magazine image here */
+    #magazine-image-homepage {
+        flex: 1;
+        grid-area: home-image1;
+        padding: 10px;
+        position: relative;
+        left: 25%;
+        right: 25%;
+    }
+    /* description of new magazine */
+    #new-book-description {
+        flex: 1;
+        grid-area: book-des;
+        padding: 10px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+    }
+
+    /* Contents at the end of the page */
+    /* Remove bullet points */
+    .complement-info {
+        list-style-type: none;
+        text-align: center;
+    }
+    .lasting {
+        cursor: pointer;
+    }
+    #image-end {
+        border-radius: 50px;
+        flex: 1;
+        grid-area: last-image;
+        text-align: center;
+        padding: 20px;
+        height: 150px;
+        left: 50px;
+        position: relative;
+    }
+    /* Below are the settings of the last part of the pages 
+    that would introduce some additional information */
+    #end-partA-container {
+        background-color: rgb(128, 178, 175);
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'last-image flo1'
+        'flo2 flo3'
+    }
+    #final-list-object1 {
+        flex: 1;
+        grid-area: flo1;
+        text-align: center;
+        position: relative;
+    }
+    #final-list-object2 {
+        flex: 1;
+        grid-area: flo2;
+        text-align: center;
+        position: relative;
+    }
+    #final-list-object3 {
+        flex: 1;
+        grid-area: flo3;
+        text-align: center;
+        position: relative;
+    }
+    #end-partB-container {
+        background-color: gray;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'flo4 flo4 flo4'
+        'flo5 flo5 flo5'
+    }
+    #final-list-object4 {
+        flex: 1;
+        grid-area: flo4;
+        text-align: center;
+    }
+    #final-list-object5 {
+        flex: 1;
+        grid-area: flo5;
+        text-align: center;
+    }
+}
+
+
+/* Size for Tablet */
+@media only screen and (min-width: 571px) and (max-width: 1010px){
+
+    body {
+        background-color: azure;
+    }
+    
+    /* logo images for tablet screen size, 
+    only logo-image2 will be shown */
+    #logo-image1 {
+        display: none;
+    }
+    #logo-image2 {
+        width: 80px;
+        grid-area: logo-image2;
+        flex: 1;
+        position: absolute;
+        left: 18px;
+        top: 15px;
+        opacity: 0.8;
+        border-radius: 10px;
+    }
+    /* logo text for tablet screen size */
+    #logo-text {
+        font-family: serif;
+        color: yellowgreen;
+        grid-area: logo-text;
+        flex: 1;
+        position: absolute;
+        left: 19%;
+        top: 20px;
+        font-size: 1.4em;
+    }
+    /* 'Log In' button for tablet screen size */
+    #login-button-box {
+        grid-area: login-btn;
+        flex: 1;
+        position: absolute;
+        right: 50px;
+        top: 40px;
+    }
+
+    /* Here is the reposition part to place each element in 
+    header section in desire order for tablet */
+    .header-container {
+        background-color: rgba(10, 70, 130, 0.7);
+        border-radius: 20px;
+        padding: 40px;
+        display: grid;
+        flex: 1;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas:
+        'logo-image2 logo-text logo-text logo-text logo-text logo-btn'
+    }
+
+    /* toggle menu would not display on tablet screen size */
+    #toggle-menu {
+        margin: 0 30px 0 0;
+        font-size: 30px;
+        text-align: center;
+        display: none;
+    }
+    #toggle{
+        display: none;
+    }
+    /* Below are the properties of navigation menu 
+    on tablet screen size */
+    #nav-bars-container {
+        flex: 1;
+        border-radius: 11px;
+        text-align: center;
+        border: 1px solid gray;
+        background-color: hsl(196, 57%, 54%);
+        grid-area: nav-bars-container;
+    }
+    #menu ol {
+        border:1px solid white;
+        border-width:1px 0;
+        list-style:none;
+        margin:0;
+        padding:0;
+        text-align:center;
+    }
+    /* Styling of the list of navigation bars */
+    #menu ol li {
+        list-style-type: none;
+        display: inline;
+        padding: 3px;
+        border-radius: 3px;
+        background-color:aquamarine;
+        border: 1px solid lightcoral;
+    }
+    #menu ol li a {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        color: violet;
+        padding: 5px;
+        /* border-radius: 10px; */
+        display: inline-block;
+    }
+    /* 'Sign Up' in toggle menu would not display on nav menu */
+    #signup-button-mobile {
+        visibility: hidden;
+    }
+    /* below is the styling of 'Sign Up' button in homepage */
+    #registration-button {
+        background-color: aqua;
+        color: rgb(60, 30, 50);
+        font-size: 1em;
+        text-align: center;
+        padding: 7px;
+        border-radius: 20%;
+        border: 3px solid lightyellow;
+        text-decoration: none;
+        grid-area: registration-button;
+    }
+    #registration-button:hover {
+        background-color: lightgreen;
+        color: lightyellow;
+        border-color: aqua;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    /* below are the contents for the todays-story including a video */
+    /*'Today's Story' title */
+    #todays-story {
+        flex: 1;
+        grid-area: todays-story;
+        text-align: center;
+        font-family: monospace;
+        font-size: 2em;
+        color: darkgray;
+    }
+    /*'Today's Story' content */
+    #todays-story-content {
+        flex: 1;
+        grid-area: todays-story-content;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1em;
+        position: relative;
+        padding: 5px;
+    }
+    /* 'Today's Story' video */
+    #todays-story-video {
+        flex: 1;
+        grid-area: todays-story-video;
+        border-radius: 30px;
+        width: 95%;
+        position: relative;
+        left: 7px;
+        bottom: 10px;
+    }
+    /* The arrangement of eachh element in 'Today's Story' section 
+    for tablet screen size */
+    #today-story-container {
+        background-color: aquamarine;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'todays-story todays-story todays-story todays-story-content todays-story-content todays-story-content'
+        'todays-story-video todays-story-video todays-story-video todays-story-content todays-story-content todays-story-content'
+    }
+
+    /* here is the styling module for new magazine introduction */
+    #new-book-container {
+        background-color: hsl(62, 90%, 65%);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'new-for-c new-for-c new-for-c new-for-c home-image1 home-image1'
+        'book-des book-des book-des book-des home-image1 home-image1'
+    }
+    /* title for introduce new magazine */
+    #new-for-client {
+        flex: 1;
+        grid-area: new-for-c;
+        text-align: center;
+        font-family: monospace;
+        color: rgb(30, 60, 30);
+        font-size: 2em;
+    }
+    /* magazine image here */
+    #magazine-image-homepage {
+        flex: 1;
+        grid-area: home-image1;
+        padding: 10px;
+    }
+    /* description of new magazine */
+    #new-book-description {
+        flex: 1;
+        grid-area: book-des;
+        padding: 10px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        bottom: 30px;
+    }
+
+    /* Contents at the end of the page */
+    /* Remove bullet points */
+    .complement-info {
+        list-style-type: none;
+        text-align: center;
+    }
+    .lasting {
+        cursor: pointer;
+    }
+    #image-end {
+        border-radius: 50px;
+        flex: 1;
+        grid-area: last-image;
+        text-align: center;
+        padding: 20px;
+        height: 150px;
+    }
+    /* Below are the settings of the last part of the pages 
+    that would introduce some additional information */
+    #end-partA-container {
+        background-color: rgb(128, 178, 175);
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'last-image flo1 flo2 flo3'
+    }
+    #final-list-object1 {
+        flex: 1;
+        grid-area: flo1;
+        text-align: center;
+        position: relative;
+    }
+    #final-list-object2 {
+        flex: 1;
+        grid-area: flo2;
+        text-align: center;
+        position: relative;
+    }
+    #final-list-object3 {
+        flex: 1;
+        grid-area: flo3;
+        text-align: center;
+        position: relative;
+    }
+    #end-partB-container {
+        background-color: gray;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'flo4 flo4 flo4 flo5 flo5 flo5'
+    }
+    #final-list-object4 {
+        flex: 1;
+        grid-area: flo4;
+        text-align: center;
+    }
+    #final-list-object5 {
+        flex: 1;
+        grid-area: flo5;
+        text-align: center;
+    }
+
+    /* horizontally align the navigation menu and 'Sign Up' button */
+    #nav-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'nav-bars-container nav-bars-container nav-bars-container nav-bars-container nav-bars-container registration-button'
+    }
+}
+
+
+/* Size for Desktop */
+@media only screen and (min-width: 1011px){
+
+    body {
+        background-color: azure;
+    }
+    /* logo images for desktop screen size, both of them will display */
+    #logo-image1 {
+        width: 100px;
+        grid-area: logo-image1;
+        flex: 1;
+        position: absolute;
+        left: 20px;
+        top: 13px;
+        opacity: 0.8;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    #logo-image2 {
+        width: 125px;
+        grid-area: logo-image2;
+        flex: 1;
+        position: absolute;
+        left: 120px;
+        top: 13px;
+        opacity: 0.8;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    /* logo text for desktop screen size */
+    #logo-text {
+        font-family: serif;
+        color: yellowgreen;
+        grid-area: logo-text;
+        flex: 1;
+        position: absolute;
+        left: 30%;
+        top: 16px;
+        font-size: 2em;
+    }
+    /* 'Log In' button for desktop screen size */
+    #login-button-box {
+        grid-area: login-btn;
+        flex: 1;
+        position: absolute;
+        right: 70px;
+        top: 50px;
+    }
+
+    /* Here is the reposition part to place each element in 
+    header section in desire order for desktop */
+    .header-container {
+        background-color: rgba(10, 70, 130, 0.7);
+        border-radius: 30px;
+        padding: 55px;
+        display: grid;
+        flex: 1;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas:
+        'logo-image1 logo-image2 logo-text logo-text logo-text logo-btn'
+    }
+
+    /* toggle menu would not show on desktop scrren size */
+    #toggle-menu {
+        margin: 0 30px 0 0;
+        font-size: 30px;
+        text-align: center;
+        display: none;
+    }
+    #toggle{
+        display: none;
+    }
+    /* Below are the properties of navigation menu 
+    on desktop screen size */
+    #nav-bars-container {
+        flex: 1;
+        border-radius: 11px;
+        text-align: center;
+        border: 1px solid gray;
+        background-color: hsl(196, 57%, 54%);
+        grid-area: nav-bars-container;
+    }
+    #menu ol {
+        border:1px solid white;
+        border-width:1px 0;
+        list-style:none;
+        margin:0;
+        padding:0;
+        text-align:center;
+    }
+    /* Styling of the list of navigation bars */
+    #menu ol li {
+        list-style-type: none;
+        display: inline;
+        padding: 3px;
+        border-radius: 3px;
+        background-color:aquamarine;
+        border: 1px solid lightcoral;
+    }
+    #menu ol li a {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        color: violet;
+        padding: 5px;
+        /* border-radius: 10px; */
+        display: inline-block;
+    }
+    /* 'Sign Up' in toggle menu would not display on nav menu */
+    #signup-button-mobile {
+        visibility: hidden;
+    }
+    /* below is the styling of 'Sign Up' button in homepage */
+    #registration-button {
+        background-color: aqua;
+        color: rgb(60, 30, 50);
+        font-size: 1em;
+        text-align: center;
+        padding: 7px;
+        border-radius: 20%;
+        border: 3px solid lightyellow;
+        text-decoration: none;
+        grid-area: registration-button;
+    }
+    #registration-button:hover {
+        background-color: lightgreen;
+        color: lightyellow;
+        border-color: aqua;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* below are the contents for the todays-story including a video */
+    /*'Today's Story' title */
+    #todays-story {
+        flex: 1;
+        grid-area: todays-story;
+        text-align: center;
+        font-family: monospace;
+        font-size: 2em;
+        color: darkgray;
+    }
+    /*'Today's Story' content */
+    #todays-story-content {
+        flex: 1;
+        grid-area: todays-story-content;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1em;
+        padding: 10px;
+        position: relative;
+        bottom: 20px;
+    }
+    /* 'Today's Story' video */
+    #todays-story-video {
+        flex: 1;
+        grid-area: todays-story-video;
+        position: relative;
+        bottom: 20px;
+        right: 10px;
+        border-radius: 10px;
+    }
+    /* The arrangement of eachh element in 'Today's Story' section 
+    for desktop screen size */
+    #today-story-container {
+        background-color: aquamarine;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'todays-story todays-story todays-story todays-story todays-story todays-story'
+        'todays-story-content todays-story-content todays-story-content todays-story-content todays-story-video todays-story-video'
+    }
+
+    /* here is the styling module for new magazine introduction */
+    #new-book-container {
+        background-color: hsl(62, 90%, 65%);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'new-for-c new-for-c new-for-c new-for-c home-image1 home-image1'
+        'book-des book-des book-des book-des home-image1 home-image1'
+    }
+    /* title for introduce new magazine */
+    #new-for-client {
+        flex: 1;
+        grid-area: new-for-c;
+        text-align: center;
+        font-family: monospace;
+        color: rgb(30, 60, 30);
+        font-size: 2em;
+    }
+    /* magazine image here */
+    #magazine-image-homepage {
+        flex: 1;
+        grid-area: home-image1;
+        padding: 10px;
+    }
+    /* description of new magazine */
+    #new-book-description {
+        flex: 1;
+        grid-area: book-des;
+        padding: 10px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    /* Contents at the end of the page */
+    /* Remove bullet points */
+    .complement-info {
+        list-style-type: none;
+        text-align: center;
+    }
+    .lasting {
+        cursor: pointer;
+    }
+    #image-end {
+        border-radius: 50px;
+        flex: 1;
+        grid-area: last-image;
+        text-align: center;
+        padding: 20px;
+        height: 150px;
+    }
+    /* Below are the settings of the last part of the pages 
+    that would introduce some additional information */
+    #end-partA-container {
+        background-color: rgb(128, 178, 175);
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'last-image flo1 flo2 flo3'
+    }
+    #final-list-object1 {
+        flex: 1;
+        grid-area: flo1;
+        text-align: center;
+        position: relative;
+    }
+    #final-list-object2 {
+        flex: 1;
+        grid-area: flo2;
+        text-align: center;
+        position: relative;
+    }
+    #final-list-object3 {
+        flex: 1;
+        grid-area: flo3;
+        text-align: center;
+        position: relative;
+    }
+    #end-partB-container {
+        background-color: gray;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'flo4 flo4 flo4 flo5 flo5 flo5'
+    }
+    #final-list-object4 {
+        flex: 1;
+        grid-area: flo4;
+        text-align: center;
+    }
+    #final-list-object5 {
+        flex: 1;
+        grid-area: flo5;
+        text-align: center;
+    }
+
+    /* horizontally align the navigation menu and 'Sign Up' button */
+    #nav-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        'nav-bars-container nav-bars-container nav-bars-container nav-bars-container nav-bars-container registration-button'
+    }
+
+}
+
+
+
+
+
+/* below is the styling of the size changing property of the page */
+#sizeChanging {
+    position: absolute;
+    top: -5px;
+    left: 30%;
+    right: 35%;
+    font-size: 15px;
+    color: #aaa;
+}
+/* Set the small font size */
+.smallSize {
+    font-size: 0.5em;
+}
+/* Set the medium font size */
+.mediumSize {
+    font-size: 1em;
+}
+/* Set the large font size */
+.largeSize {
+    font-size: 1.5em;
+}
+/* the cursor points to text when hove on them */
+#changeToSmall, #changeToMedium, #changeToLarge {
+    cursor: pointer;
+}

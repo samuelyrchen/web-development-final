@@ -1,0 +1,119 @@
+/* Below is the styling for subscription page */
+
+/* Size for Mobile */
+@media only screen and (max-width: 570px){
+    /* Styles the sample magazine section, which includes sample 
+    subscribed magazine image and its description, display flex that 
+    display these two elements horizontally on screen */
+    .subscribed-magazine {
+        display: inline;
+    }
+    /* Styles of the sample subscribed magazine image */
+    .subscribed-magazine-image {
+        width: 50%;
+        padding: 20px;
+        position: relative;
+        left: 20%;
+    }
+    /* Styles of the descriptive paragraph of sample subscribed magazine */
+    /* Notice: this would not display on mobile screen */
+    .sample-magazine-description {
+        display: none;
+        position: relative;
+        top: 70px;
+        padding: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    /* Styles of the 'Unsubscribe' button */
+    .unsubscribe-button {
+        position: relative;
+        right: 15%;
+        cursor: pointer;
+        background: yellow;
+        color: red;
+    }
+    /* Change the styling when hover on 'Unsubscribe' button */
+    .unsubscribe-button:hover {
+        background: red;
+        color: yellow;
+        font-weight: bold;
+    }
+}
+
+/* Size for Tablet */
+@media only screen and (min-width: 571px) and (max-width: 1010px){
+    /* Styles the sample magazine section, which includes sample 
+    subscribed magazine image and its description, display flex that 
+    display these two elements horizontally on screen */
+    .subscribed-magazine {
+        display: flex;
+        background-color: greenyellow;
+        border-radius: 30px;
+        border: 1px solid darkgreen;
+    }
+    /* Styles of the sample subscribed magazine image */
+    .subscribed-magazine-image {
+        width: 300px;
+        padding: 20px;
+    }
+    /* Styles of the descriptive paragraph of sample subscribed magazine */
+    .sample-magazine-description {
+        position: relative;
+        top: 70px;
+        padding: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    /* Styles of the 'Unsubscribe' button */
+    .unsubscribe-button {
+        cursor: pointer;
+        background: yellow;
+        color: red;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    /* Change the styling when hover on 'Unsubscribe' button */
+    .unsubscribe-button:hover {
+        background: red;
+        color: yellow;
+        font-weight: bold;
+    }
+}
+
+/* Size for Desktop */
+@media only screen and (min-width: 1011px){
+    /* Styles the sample magazine section, which includes sample 
+    subscribed magazine image and its description, display flex that 
+    display these two elements horizontally on screen */
+    .subscribed-magazine {
+        display: flex;
+        background-color: greenyellow;
+        border-radius: 30px;
+        border: 1px solid darkgreen;
+    }
+    /* Styles of the sample subscribed magazine image */
+    .subscribed-magazine-image {
+        width: 300px;
+        padding: 20px;
+    }
+    /* Styles of the descriptive paragraph of sample subscribed magazine */
+    .sample-magazine-description {
+        position: relative;
+        top: 70px;
+        padding: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    /* Styles of the 'Unsubscribe' button */
+    .unsubscribe-button {
+        cursor: pointer;
+        background: yellow;
+        color: red;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    /* Change the styling when hover on 'Unsubscribe' button */
+    .unsubscribe-button:hover {
+        background: red;
+        color: yellow;
+        font-weight: bold;
+    }
+}

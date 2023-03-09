@@ -1,0 +1,38 @@
+
+
+#sorting-container {
+    display: flex;
+}
+#sorting-container button {
+    background: rgb(2, 105, 240);
+    color: antiquewhite;
+    width: 20%;
+    border: none;
+    margin: 20px 20px;
+    height: 40px;
+    border-radius: 20px;
+}
+#sorting-container button:hover {
+    border: solid gold;
+    color: rgb(2, 105, 240);
+    background: antiquewhite;
+    font-weight: bold;
+}
+
+
+.all {
+    display: flex;
+    background: rgba(0, 235, 216, 0.5);
+    border-radius: 20px;
+}
+.magazine-image {
+    width: 300px;
+    max-width: 310px;
+    padding: 20px;
+}
+.description-paragraph {
+    position: relative;
+    top: 70px;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
